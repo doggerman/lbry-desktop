@@ -198,12 +198,11 @@ p:not(:first-of-type) {
 
 // Empty pages that display columns of content
 .page__empty--horizontal {
-  max-width: 60vw;
+  max-width: 45vw;
   margin: auto;
   display: flex;
   flex-direction: row;
   text-align: left;
-  justify-content: center;
 }
 
 .columns {

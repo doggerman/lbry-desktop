@@ -16,7 +16,7 @@ import { Lbryio, rewards, doClaimRewardType } from 'lbryinc';
 import { selectSubscriptions, selectUnreadByChannel } from 'redux/selectors/subscriptions';
 import { makeSelectClientSetting } from 'redux/selectors/settings';
 import { Lbry, buildURI, parseURI, doResolveUris } from 'lbry-redux';
-import { doPurchaseUri, doFetchClaimsByChannel } from 'redux/actions/content';
+import { doPurchaseUri } from 'redux/actions/content';
 import Promise from 'bluebird';
 
 const CHECK_SUBSCRIPTIONS_INTERVAL = 15 * 60 * 1000;
@@ -400,7 +400,7 @@ export const doCheckSubscriptionsInit = () => (dispatch: ReduxDispatch) => {
   // doCheckSubscriptionsInit is called by doDaemonReady
   // setTimeout below is a hack to ensure redux is hydrated when subscriptions are checked
   // this will be replaced with <PersistGate> which reqiures a package upgrade
-  setTimeout(() => dispatch(doFetchMySubscriptions()), 5000);
+  setTimeout(() => dispatch(doFetchMySubscriptions()), 3000);
   const checkSubscriptionsTimer = setInterval(
     () => dispatch(doCheckSubscriptions()),
     CHECK_SUBSCRIPTIONS_INTERVAL

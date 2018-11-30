@@ -54,6 +54,15 @@ export default class extends PureComponent<Props> {
     }
   }
 
+  // If the page was initially loaded before subscriptions were done fetching
+  // Show the suggested subs once the subscriptions are loaded
+  componentDidUpdate(prevProps: Props) {
+    const { allSubscriptions, showSuggestedSubs, doShowSuggestedSubs } = this.props;
+    if (!showSuggestedSubs && !!allSubscriptions.length && !!prevProps.allSubscriptions.length) {
+      doShowSuggestedSubs();
+    }
+  }
+
   onAutoDownloadChange(event: SyntheticInputEvent<*>) {
     this.props.doSetClientSetting(SETTINGS.AUTO_DOWNLOAD, event.target.checked);
   }
