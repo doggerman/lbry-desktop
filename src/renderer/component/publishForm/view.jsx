@@ -292,9 +292,9 @@ class PublishForm extends React.PureComponent<Props> {
           {uploadThumbnailStatus === THUMBNAIL_STATUSES.IN_PROGRESS && (
             <div>{__('Please wait for thumbnail to finish uploading')}</div>
           )}
-          {!!editingURI &&
-            !isStillEditing &&
-            !filePath && <div>{__('You need to reselect a file after changing the LBRY URL')}</div>}
+          {!!editingURI && !isStillEditing && !filePath && (
+            <div>{__('You need to reselect a file after changing the LBRY URL')}</div>
+          )}
         </div>
       )
     );
@@ -362,7 +362,7 @@ class PublishForm extends React.PureComponent<Props> {
             <div className="card__internal-links">
               <Button
                 button="inverse"
-                icon={icons.CLOSE}
+                icon={ICONS.CLOSE}
                 label={__('Clear')}
                 onClick={clearPublish}
               />

@@ -96,7 +96,7 @@ const Header = (props: Props) => {
         {showUpgradeButton && (
           <Button
             button="primary"
-            icon={icons.DOWNLOAD}
+            icon={ICONS.DOWNLOAD}
             label={__('Upgrade App')}
             onClick={downloadUpgradeRequested}
           />

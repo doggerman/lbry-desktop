@@ -1,6 +1,6 @@
 // @flow
-import * as ICONS from 'constants/icons';
 import * as SETTINGS from 'constants/settings';
+import * as ICONS from 'constants/icons';
 import * as React from 'react';
 import { isURIValid, normalizeURI, parseURI } from 'lbry-redux';
 import { FormField, FormRow } from 'component/common/form';
