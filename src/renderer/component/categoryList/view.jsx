@@ -7,7 +7,6 @@ import ToolTip from 'component/common/tooltip';
 import FileCard from 'component/fileCard';
 import Button from 'component/button';
 import SubscribeButton from 'component/subscribeButton';
-import classnames from 'classnames';
 
 type Props = {
   category: string,
@@ -208,13 +207,7 @@ class CategoryList extends PureComponent<Props, State> {
   }
 
   render() {
-    const {
-      category,
-      categoryLink,
-      names,
-      channelClaims,
-      obscureNsfw,
-    } = this.props;
+    const { category, categoryLink, names, channelClaims, obscureNsfw } = this.props;
     const { canScrollNext, canScrollPrevious } = this.state;
     const isCommunityTopBids = category.match(/^community/i);
     const showScrollButtons = isCommunityTopBids ? !obscureNsfw : true;

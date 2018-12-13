@@ -3,6 +3,7 @@ import * as ICONS from 'constants/icons';
 import * as React from 'react';
 import Button from 'component/button';
 import WunderBar from 'component/wunderbar';
+import LbcSymbol from 'component/common/lbc-symbol';
 
 type Props = {
   autoUpdateDownloaded: boolean,
@@ -47,6 +48,7 @@ const Header = (props: Props) => {
             ) : (
               <React.Fragment>
                 <span title={`${balance} LBC`}>{roundedBalance}</span>
+                <LbcSymbol />
               </React.Fragment>
             )
           }

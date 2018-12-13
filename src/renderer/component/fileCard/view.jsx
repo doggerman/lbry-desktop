@@ -76,12 +76,12 @@ class FileCard extends React.PureComponent<Props> {
 
     if ((!claim && !pending) || placeholder) {
       return (
-        <section className="media-card media--placeholder small">
+        <li className="media-card media--placeholder small">
           <div className="media__thumb media__thumb--placeholder" />
           <div className="media__title media__title--placeholder" />
           <div className="media__channel media__channel--placeholder" />
           <div className="media__date media__date--placeholder" />
-        </section>
+        </li>
       );
     }
 
@@ -104,7 +104,7 @@ class FileCard extends React.PureComponent<Props> {
     // We should be able to tab through cards
     /* eslint-disable jsx-a11y/click-events-have-key-events */
     return (
-      <section
+      <li
         tabIndex="0"
         role="button"
         onClick={!pending ? () => navigate('/show', { uri }) : () => {}}
@@ -131,7 +131,7 @@ class FileCard extends React.PureComponent<Props> {
           {fileInfo && <Icon icon={icons.LOCAL} />}
           {isNew && <span className="badge badge--alert">{__('NEW')}</span>}
         </div>
-      </section>
+      </li>
     );
     /* eslint-enable jsx-a11y/click-events-have-key-events */
   }
