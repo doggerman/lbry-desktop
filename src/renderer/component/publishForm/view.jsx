@@ -371,7 +371,7 @@ class PublishForm extends React.PureComponent<Props> {
           <div className="card__content">
             <FileSelector currentPath={filePath} onFileChosen={this.handleFileChange} />
             {!!isStillEditing && name && (
-              <p className="card__content card__subtitle">
+              <p className="help">
                 {__("If you don't choose a file, the file from your existing claim")}
                 {` "${name}" `}
                 {__('will be used.')}

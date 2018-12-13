@@ -192,7 +192,7 @@ class FilePage extends React.Component<Props> {
             </div>
 
             <div className="media__subtitle__date">
-              {__('published on')} <DateTime block={height} show={DateTime.SHOW_DATE} />
+              {__('Published on')} <DateTime block={height} show={DateTime.SHOW_DATE} />
             </div>
           </div>
 

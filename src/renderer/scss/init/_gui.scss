@@ -1,6 +1,12 @@
 // Generic html styles used accross the App
 // component specific styling should go in the component scss file
 
+*,
+*::before,
+*::after {
+  -webkit-user-select: text;
+}
+
 html {
   @include font-sans;
   background-color: $lbry-white;

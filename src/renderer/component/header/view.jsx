@@ -2,8 +2,8 @@
 import * as ICONS from 'constants/icons';
 import * as React from 'react';
 import Button from 'component/button';
-import WunderBar from 'component/wunderbar';
 import LbcSymbol from 'component/common/lbc-symbol';
+import WunderBar from 'component/wunderbar';
 
 type Props = {
   autoUpdateDownloaded: boolean,
